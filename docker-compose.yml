@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  junta-toba:
+    build: .
+    container_name: junta-toba
+    depends_on:
+      - junta-postgres
+    ports:
+      - 80:80
+    volumes:
+      - ./app:/app/aplicacion
+#      - ./conf:/app/conf
+#      - ./toba_instalacion/toba.conf:/etc/apache2/sites-enabled/toba_3.conf
+#      - ./toba_instalacion:/app/instalacion
+#      - ./toba_vendor:/app/toba
+
+  junta-postgres:
+    image: postgres
+    ports:
+      - 5433:5432
+    env_file:
+      - .env  
+    volumes:
+      - ./data/:/var/lib/postgresql/data
