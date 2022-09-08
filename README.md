@@ -9,4 +9,7 @@ cd /app/toba
 composer install
 
  export TOBA_INSTALACION_DIR=/app/instalacion   
- bin/toba instalacion instalar
+ cd /app/toba/bin
+
+ ./toba instalacion instalar
+ ./toba instalacion cambiar_permisos

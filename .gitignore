@@ -1,1 +1,4 @@
 .directory
+toba_instalacion/*
+toba_vendor/*
+app/*

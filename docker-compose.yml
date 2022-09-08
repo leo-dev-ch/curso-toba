@@ -10,10 +10,9 @@ services:
       - 80:80
     volumes:
       - ./app:/app/aplicacion
-#      - ./conf:/app/conf
 #      - ./toba_instalacion/toba.conf:/etc/apache2/sites-enabled/toba_3.conf
-#      - ./toba_instalacion:/app/instalacion
-#      - ./toba_vendor:/app/toba
+      - ./toba_instalacion:/app/instalacion
+      - ./toba_vendor:/app/toba
 
   junta-postgres:
     image: postgres
